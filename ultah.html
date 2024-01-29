@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ucapan Selamat Ulang Tahun</title>
+  <style>
+    body {
+      background-color: #f5f5f5;
+      font-family: Arial, sans-serif;
+    }
+
+    .slideshow-container {
+      position: relative;
+      width: 80%;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .slide {
+      display: none;
+    }
+
+    .title {
+      color: #ff3366;
+      font-size: 36px;
+    }
+
+    .message {
+      color: #333333;
+      font-size: 18px;
+    }
+
+    .button {
+      background-color: #ff3366;
+      color: #ffffff;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .fade {
+      animation-name: fade;
+      animation-duration: 1s;
+    }
+
+    @keyframes fade {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+  <audio autoplay loop>
+    <source src="musik.mp3" type="audio/mpeg">
+    <source src="musik.mp3" type="audio/wav">
+    <source src="musik.mp3" type="audio/ogg">
+    Your browser does not support the audio element.
+  </audio>
+  
+  <div class="slideshow-container">
+    <div class="slide fade">
+      <h1 class="title">Selamat Ulang Tahun Sengkuuuuu!</h1>
+      <p class="message">Happy Birthday, sayangku! Semoga hari ini penuh dengan kebahagiaan dan cinta. Selamat ulang tahun my love! ❤️🎉</p>
+      <button class="button" onclick="nextSlide()">Lanjut</button>
+    </div>
+    <div class="slide fade">
+      <h1 class="title">Terima Kasih!</h1>
+      <p class="message">Macii seng, karena selalu ada untukku. Kamu adalah sosok yang luar biasa. Aku berterima kasih atas cinta dan dukunganmu. Selamat ulang tahun! 💖🎂</p>
+      <button class="button" onclick="nextSlide()">Lanjut</button>
+    </div>
+    <div class="slide fade">
+        <h1 class="title">Doa untuk kamu</h1>
+        <p class="message">Semoga kamu sehat selalu, panjang umur, dipermudah dalam segala hal, dilancarkan rezekinya.<br>
+        Disukseskan semua impian kamunya, terus semua doa doa mu terkabulkan, amiin.</p>
+        <button class="button" onclick="nextSlide()">Lanjut</button>
+      </div>
+      <div class="slide fade">
+        <h1 class="title">Doa untuk kita</h1>
+        <p class="message">Semoga kita selamanya tetap "kita" bukan hanya aku atau kamu<br>
+        Semoga kita langgeng, semoga semua yang kita impikan terwujud, kan pengen sampe nikah ceritanya wkwk, amiin<br>
+    Semoga kita selalu bahagia, selalu bisa ngelewatin masalah masalah atau kesulitan dalam hubungan kita.<br>
+Semoga kita selalu dikuatkan dan diberi kesabaran untuk ngelewatin semuanya ya seng.</p>
+        <button class="button" onclick="nextSlide()">Lanjut</button>
+      </div>
+      <div class="slide fade">
+        <h1 class="title">Pesan buat kita</h1>
+        <p class="message">Yang terpenting selalu mengerti satu sama lain, ga aneh aneh, ga main main.<br>
+        Selalu sabar ngadapin sikap satu sama lain<br>
+    Mencegah masuknya orang lain dalam hubungan kita<br>
+Ingett!!! kita sama sama punya janji, sama sama punya kesalahan jadi ayo sama sama tepatin janji dan ayo tidak mengulangi kesalahan kesalahan yang sudah.</p>
+        <button class="button" onclick="nextSlide()">Lanjut</button>
+      </div>
+      <div class="slide fade">
+        <h1 class="title">TUJUAN AKU SAMA KAMU ADALAH UNTUK SELAMANYA</h1>
+        <p class="message">Aku masih mau sama kamu di ultah ultah mu kedepan sampai selamanya<br>
+        Tujuanku adalah kamu, jadi sengg, please sama aku terus ya. buang jauh jauh hal yang bisa buat kita ga sama sama, aku sayang kamu.</p>
+        <button class="button" onclick="nextSlide()">Abis seng, hehe</button>
+      </div>
+    <!-- Tambahkan slide selanjutnya sesuai dengan contoh di atas -->
+  </div>
+  
+  <script>
+    var slideIndex = 0;
+    showSlide(slideIndex);
+
+    function nextSlide() {
+      slideIndex++;
+      showSlide(slideIndex);
+    }
+
+    function showSlide(index) {
+      var slides = document.getElementsByClassName("slide");
+      if (index >= slides.length) {
+        slideIndex = 0;
+      }
+      if (index < 0) {
+        slideIndex = slides.length - 1;
+      }
+      for (var i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      slides[slideIndex].style.display = "block";
+    }
+  </script>
+</body>
+</html>
